@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		%sveltekit.head%
+		<link href="%sveltekit.assets%/bootstrap.min.css" rel="stylesheet" />
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+		<script src="%sveltekit.assets%/bootstrap.bundle.min.js"></script>
+		<script>
+			let metaDarkmode = document.querySelector('meta[name="DARK_MODE"]');
+			if (metaDarkmode) {
+				let observer = new MutationObserver(function (mutations) {
+					mutations.forEach(function (mutation) {
+						if (mutation.attributeName === 'content') {
+							let darkMode = metaDarkmode.getAttribute('content');
+							if (darkMode == 'true') {
+								document.documentElement.setAttribute('data-bs-theme', 'dark');
+							} else {
+								document.documentElement.setAttribute('data-bs-theme', '');
+							}
+						}
+					});
+				});
+
+				observer.observe(metaDarkmode, { attributes: true });
+			}
+		</script>
+	</body>
+</html>
