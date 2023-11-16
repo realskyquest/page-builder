@@ -28,7 +28,7 @@
 
 <nav class="navbar navbar-expand-lg py-3 fixed-top {navBar} border-bottom">
 	<div class="container">
-		<p class="navbar-brand h3">Sveltekit Template</p>
+		<a href="{base}/" class="navbar-brand h3">Page builder</a>
 
 		<button
 			class="navbar-toggler"
@@ -45,13 +45,14 @@
 		<div class="lc-block collapse navbar-collapse" id="myNavbar3">
 			<div lc-helper="shortcode" class="live-shortcode ms-auto">
 				<ul id="menu-menu-1" class="navbar-nav me-auto mb-2 mb-md-0 navbar-nav">
-					<li
-						class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-32739"
-					>
+					<li class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item">
 						<a href="{base}/" class="nav-link display-6"> Home </a>
 					</li>
+					<li class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item">
+						<a href="{base}/app/" class="nav-link display-6"> App </a>
+					</li>
 					<li
-						class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item-32738"
+						class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item"
 					>
 						<a href="{base}/about/" class="nav-link display-6"> About </a>
 					</li>
