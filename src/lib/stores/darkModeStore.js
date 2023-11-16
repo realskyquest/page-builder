@@ -5,7 +5,7 @@ const store = writable(null);
 
 async function init() {
 	if (browser) {
-		let darkMode = JSON.parse(localStorage.getItem('sveltekit-template-dark-mode'));
+		let darkMode = JSON.parse(localStorage.getItem('page-builder-dark-mode'));
 
 		if (darkMode == true) {
 			// saved data = true
@@ -22,7 +22,7 @@ async function init() {
 
 async function set(currentMode) {
 	if (browser) {
-		localStorage.setItem('sveltekit-template-dark-mode', currentMode);
+		localStorage.setItem('page-builder-dark-mode', currentMode);
 	}
 }
 
