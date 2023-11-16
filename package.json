@@ -21,5 +21,10 @@
 		"svelte": "^4.0.5",
 		"vite": "^4.4.2"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@codemirror/lang-html": "^6.4.6",
+		"codemirror": "^6.0.1",
+		"svelte-codemirror-editor": "^1.1.0"
+	}
 }
